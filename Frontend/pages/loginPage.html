@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div class="container" id="container">
@@ -25,11 +27,11 @@
 
             <span>or use your email for registration</span>
 
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="text" placeholder="Name" id="name"/>
+            <input type="email" placeholder="Email" id="email" />
+            <input type="password" placeholder="Password" id="password" />
 
-            <button onclick="return false;">Sign Up</button>
+            <button id="sign-up">Sign Up</button>
 
         </form>
 
@@ -49,12 +51,12 @@
 
             <span>or use your account</span>
 
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="email" placeholder="Email" id="email-signin"/>
+            <input type="password" placeholder="Password" id="password-signin" />
 
             <a href="pages/forget.html">Forgot your password?</a>
 
-            <button onclick="return false;">Sign In</button>
+            <button id="sign-in">Sign In</button>
 
         </form>
 
@@ -90,8 +92,6 @@
 
 </div>
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../js/login.js"></script>
 </body>
 </html>
