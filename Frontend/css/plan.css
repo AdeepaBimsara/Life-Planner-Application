@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #cae7f9, #c5f6dd, #cedcf6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.title{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 40%;
+    background: rgba(109, 213, 237, 0.85);
+    border-radius: 100px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.container {
+    background: rgba(255,255,255,0.9);
+    padding: 40px 30px;
+    border-radius: 25px;
+    width: 450px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.step {
+    display: none;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg,#0095ff,#00c6ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+input {
+    width: 85%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+}
+
+input:focus {
+    border-color: #0095ff;
+    box-shadow: 0 0 8px rgba(0,149,255,0.3);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+ul li {
+    background: rgba(0,0,0,0.05);
+    margin: 6px 0;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+ul li:hover {
+    background: rgba(0,0,0,0.08);
+    transform: scale(1.02);
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .title {
+        width: 80%;
+        font-size: 24px;
+    }
+
+    input {
+        width: 95%;
+    }
+}
+
+/*#step5 {*/
+/*    display: none; !* still hidden by default *!*/
+/*    margin-top: 30px;*/
+/*}*/
+
+/*#step5 h2 {*/
+/*    font-size: 26px;*/
+/*    font-weight: 600;*/
+/*    color: #0095ff;*/
+/*    margin-bottom: 20px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*#planSummary {*/
+/*    background: rgba(255,255,255,0.95);*/
+/*    padding: 25px;*/
+/*    border-radius: 25px;*/
+/*    box-shadow: 0 15px 40px rgba(0,0,0,0.1);*/
+/*    max-height: 400px;*/
+/*    overflow-y: auto;*/
+/*    font-size: 16px;*/
+/*    line-height: 1.6;*/
+/*    color: #333;*/
+/*    transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+/*}*/
+
+/*#planSummary:hover {*/
+/*    transform: translateY(-5px);*/
+/*    box-shadow: 0 20px 50px rgba(0,0,0,0.15);*/
+/*}*/
+
+#step5 {
+
+    font-family: 'Poppins', sans-serif;
+}
+
+#step5 h2 {
+    text-align: center;
+    color: #0095ff;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+#step5 table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#step5 thead {
+    background: #0095ff;
+    color: white;
+    font-size: 10px;
+}
+
+#step5 th, #step5 td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+#step5 tbody tr:nth-child(even) {
+    background: rgba(0,149,255,0.05);
+}
+
+#step5 tbody tr:nth-child(odd) {
+    background: rgba(0,149,255,0.1);
+}
+
+#step5 tbody tr:hover {
+    background: rgba(0,149,255,0.2);
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+}
+
+
+#taskList {
+    list-style: none;
+    padding-left: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+#taskList li {
+    background: rgba(0, 149, 255, 0.05);
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 15px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 4px solid transparent;
+}
+
+#taskList li:hover {
+    background: rgba(0, 149, 255, 0.1);
+    transform: translateX(3px);
+    border-left: 4px solid #0095ff;
+}
+
+#taskList li.selected {
+    background: rgba(0, 149, 255, 0.2);
+    font-weight: 600;
+    border-left: 4px solid #007acc;
+    color: #007acc;
+}

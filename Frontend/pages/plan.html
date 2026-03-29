@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifePlan App</title>
+    <link rel="stylesheet" href="../css/plan.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="title" id="head-title">
+        <h1>Create Your Plan</h1>
+    </div>
+
+<div class="container">
+
+    <!-- Step 1: Plan Type -->
+    <div class="step" id="step1">
+        <h2>Select Plan Type</h2>
+        <div class="options">
+            <button onclick="nextStep('Day')">Day Plan</button>
+            <button onclick="nextStep('Week')">Week Plan</button>
+            <button onclick="nextStep('Month')">Month Plan</button>
+            <button onclick="nextStep('Year')">Year Plan</button>
+        </div>
+    </div>
+
+    <!-- Step 2: Category -->
+    <div class="step" id="step2">
+        <h2>Select Category</h2>
+        <div class="options">
+            <button onclick="nextStepCategory('Work')">Work</button>
+            <button onclick="nextStepCategory('Study')">Study</button>
+            <button onclick="nextStepCategory('Health')">Health</button>
+            <button onclick="nextStepCategory('Fitness')">Fitness</button>
+            <button onclick="nextStepCategory('Personal')">Personal</button>
+        </div>
+    </div>
+
+    <!-- Step 3: Time Selection -->
+    <div class="step" id="step3">
+        <h2>Select Time</h2>
+        <div id="timeInputs"></div>
+        <button onclick="nextStepTime()">Next</button>
+
+        <button type="reset">Clear</button>
+    </div>
+
+    <!-- Step 4: Add Tasks -->
+    <div class="step" id="step4">
+
+        <h2>Add Tasks</h2>
+        <input type="text" id="taskName" placeholder="Task Name"><br><br>
+
+        <label>Start Time:</label>
+        <input type="time" id="taskStart" placeholder="Start Time"><br><br>
+
+        <label>End Time:</label>
+        <input type="time" id="taskEnd" placeholder="End Time"><br><br>
+
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="editTask()" id="updateBtn">Update Task</button>
+        <button type="reset">Clear </button>
+
+        <ul id="taskList"></ul>
+        <button onclick="savePlan()">Save Plan </button>
+    </div>
+
+    <!-- Step 5: Plan Summary -->
+    <div class="step" id="step5">
+        <h2>Plan Summary</h2>
+        <div id="planSummary"></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Plan Type</th>
+                    <th scope="col">Plan Category</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+            <tbody id="tblSummary">
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="../js/plan.js"></script>
+</body>
+</html>
