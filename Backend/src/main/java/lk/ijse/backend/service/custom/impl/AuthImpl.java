@@ -1,4 +1,4 @@
-package lk.ijse.backend.service;
+package lk.ijse.backend.service.custom.impl;
 
 import lk.ijse.backend.dto.AuthDTO;
 import lk.ijse.backend.dto.AuthResponseDTO;
@@ -6,6 +6,7 @@ import lk.ijse.backend.dto.RegisterDTO;
 import lk.ijse.backend.entity.Role;
 import lk.ijse.backend.entity.User;
 import lk.ijse.backend.repo.UserRepo;
+import lk.ijse.backend.service.custom.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class AuthService {
+public class AuthImpl implements AuthService {
     private final UserRepo userRepo;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;

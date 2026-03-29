@@ -1,7 +1,10 @@
 package lk.ijse.backend.config;
 
+import lk.ijse.backend.entity.Plan;
+import lk.ijse.backend.entity.Task;
 import lk.ijse.backend.repo.UserRepo;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -34,5 +37,11 @@ public class ApplicationConfig {
     public BCryptPasswordEncoder passwordEncoder () {
         return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    public ModelMapper modelMapper(){
+        return new ModelMapper();
+    }
+
 
 }

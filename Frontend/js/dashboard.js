@@ -16,8 +16,14 @@ $(document).ready(function(){
 });
 
 // smooth hover effect
-$(".card-box").hover(function(){
-    $(this).css("transform", "translateY(-10px) scale(1.05)");
-}, function(){
-    $(this).css("transform", "none");
-});
+// $(".card-box").hover(function(){
+//     $(this).css("transform", "translateY(-10px) scale(1.05)");
+// }, function(){
+//     $(this).css("transform", "none");
+// });
+
+// const sidebar = document.querySelector('.sidebar');
+// document.getElementById('toggleSidebar').addEventListener('click', () => {
+//     sidebar.classList.toggle('collapsed');
+// });
+

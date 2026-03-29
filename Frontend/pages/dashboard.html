@@ -10,6 +10,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/dashboard.css">
 
     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
@@ -19,14 +21,17 @@
 <div class="d-flex">
 
     <!-- SIDEBAR -->
+    <div class="sidebar-logo">
+        <h4 class="logo" ><img src="../assets/img/logonew.png" class="logo"></h4>
+    </div>
     <div class="sidebar p-3">
-        <h4 class="logo" ><img src="../asset/img/&Lage.png" class="logo"></h4>
         <ul class="nav flex-column mt-4">
-            <li class="nav-item active"><i class="fa fa-home"></i> Dashboard</li>
-            <li class="nav-item"><i class="fa fa-chart-line"></i> Planning</li>
-            <li class="nav-item"><i class="fa fa-comments"></i> Chat</li>
-            <li class="nav-item"><i class="fa fa-user"></i> Profile</li>
-            <li class="nav-item"><i class="fa fa-bell icon"></i> Notification</li>
+            <li class="nav-item active"><i class="fa fa-home"></i> <b>Dashboard</b></li>
+            <a href="plan.html" class="nav-item"><li class="nav-item"><i class="fa fa-chart-line"></i> <b>Planning</b></li></a>
+            <a href="planSummary.html" class="nav-item"><li class="nav-item"><i class="fa fa-chart-line"></i> <b>Summary</b></li></a>
+            <li class="nav-item"><i class="fa fa-comments"></i> <b>Chat</b></li>
+            <li class="nav-item"><i class="fa fa-user"></i> <b>Profile</b></li>
+            <li class="nav-item"><i class="fa fa-bell icon"></i> <b>Notification</b></li>
         </ul>
     </div>
 
@@ -59,35 +64,35 @@
         <!-- CONTENT -->
         <div class="p-4">
 
-            <h2 class="mb-4">Analytics Overview</h2>
+            <h2 class="mb-4"><b>Analytics Overview</b></h2>
 
             <!-- CARDS -->
             <div class="row g-4">
 
                 <div class="col-md-3">
                     <div class="card-box">
-                        <h6>Daily Steps</h6>
+                        <h6><b>Daily Steps</b></h6>
                         <h3>8,432</h3>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="card-box">
-                        <h6>Tasks Completed</h6>
+                        <h6><b>Tasks Completed</b></h6>
                         <h3>12</h3>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="card-box">
-                        <h6>Weekly Goal Progress</h6>
+                        <h6><b>Weekly Goal Progress</b></h6>
                         <h3>70%</h3>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="card-box">
-                        <h6>Habit Streak</h6>
+                        <h6><b>Habit Streak</b></h6>
                         <h3>5 Days</h3>
                     </div>
                 </div>
@@ -96,7 +101,7 @@
             <div class="charts-wrapper">
                 <!-- CHART -->
                 <div class="chart-box mt-5 p-4">
-                    <h5>Weekly Activity</h5>
+                    <h5><b>Weekly Activity</b></h5>
                     <div class="bars mt-4 d-flex align-items-end gap-3">
                         <div class="bar" style="height:80px"></div>
                         <div class="bar" style="height:140px"></div>
@@ -111,7 +116,7 @@
                 <!--Donut Chart -->
                 <div class="chart-card">
                     <div class="chart-header">
-                        <h3 class="chart-title">Goal Completion</h3>
+                        <h3 class="chart-title"><b>Goal Completion</b></h3>
                     </div>
                     <div class="donut-container">
                         <div class="donut-chart">
