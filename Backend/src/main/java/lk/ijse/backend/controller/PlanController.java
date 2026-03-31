@@ -19,7 +19,7 @@ public class PlanController {
     private final PlanService planService;
 
     @PostMapping("/save")
-    public ResponseEntity<APIResponse> savePlan(@RequestBody PlanDTO planDTO){
+        public ResponseEntity<APIResponse> savePlan(@RequestBody PlanDTO planDTO){
 
         System.out.println("received plan:"+planDTO);
 

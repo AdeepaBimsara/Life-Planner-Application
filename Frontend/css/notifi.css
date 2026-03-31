@@ -1,0 +1,67 @@
+h2{
+    text-align: center;
+}
+/* Notification Table Styling */
+#notificationTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Table header */
+#notificationTable thead {
+    background: linear-gradient(135deg, #0095ff, #00c6ff);
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Table cells */
+#notificationTable th,
+#notificationTable td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Zebra stripes */
+#notificationTable tbody tr:nth-child(even) {
+    background: rgba(0,149,255,0.05);
+}
+
+#notificationTable tbody tr:nth-child(odd) {
+    background: rgba(0,149,255,0.1);
+}
+
+/* Hover effect */
+#notificationTable tbody tr:hover {
+    background: rgba(0,149,255,0.2);
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+}
+
+/* Status colors */
+#notificationTable td:nth-child(3) {
+    font-weight: bold;
+}
+
+#notificationTable td.status-started {
+    color: green;
+}
+
+#notificationTable td.status-ended {
+    color: red;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+    #notificationTable th, #notificationTable td {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}

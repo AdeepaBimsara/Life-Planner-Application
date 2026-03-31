@@ -13,17 +13,41 @@ $(document).ready(function(){
         $(this).css("opacity", "1");
     });
 
+    connectWebSocket()
+
 });
 
-// smooth hover effect
-// $(".card-box").hover(function(){
-//     $(this).css("transform", "translateY(-10px) scale(1.05)");
-// }, function(){
-//     $(this).css("transform", "none");
-// });
+//notification
+let stompClient = null;
 
-// const sidebar = document.querySelector('.sidebar');
-// document.getElementById('toggleSidebar').addEventListener('click', () => {
-//     sidebar.classList.toggle('collapsed');
-// });
+function connectWebSocket() {
+    const socket = new SockJS('http://localhost:8080/ws');
+    stompClient = Stomp.over(socket);
+
+    stompClient.connect({}, function(frame) {
+        console.log("Connected: " + frame);
+
+        stompClient.subscribe('/topic/notifications', function(message) {
+            const notification = JSON.parse(message.body);
+
+            addNotificationToUI(notification);
+        });
+    });
+}
+
+function addNotificationToUI(notification) {
+    const statusClass = notification.status === "Started"
+        ? "status-started"
+        : "status-ended";
+
+    alert("you have notification")
+
+    $('#notificationTable tbody').append(`
+        <tr class="new-notification">
+            <td>${notification.task.name}</td>
+            <td>${new Date(notification.notificationTime).toLocaleTimeString()}</td>
+            <td class="${statusClass}">${notification.status}</td>
+        </tr>
+    `);
+}
 

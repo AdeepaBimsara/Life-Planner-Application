@@ -6,7 +6,24 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     margin: 0;
+
+    animation: smoothFadeSlide 0.4s ease;
+
 }
+
+@keyframes smoothFadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+
 
 #step5 {
     margin-top: 20px;

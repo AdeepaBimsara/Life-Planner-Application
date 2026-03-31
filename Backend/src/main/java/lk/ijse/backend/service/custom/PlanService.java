@@ -8,4 +8,5 @@ public interface PlanService {
     public void savePlan(PlanDTO planDTO);
     public List<PlanDTO>getAllPlans();
     public void deletePlan(Long id);
+    public void delete(Long id);
 }

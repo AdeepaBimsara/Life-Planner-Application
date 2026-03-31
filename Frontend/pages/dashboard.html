@@ -26,12 +26,49 @@
     </div>
     <div class="sidebar p-3">
         <ul class="nav flex-column mt-4">
-            <li class="nav-item active"><i class="fa fa-home"></i> <b>Dashboard</b></li>
-            <a href="plan.html" class="nav-item"><li class="nav-item"><i class="fa fa-chart-line"></i> <b>Planning</b></li></a>
-            <a href="planSummary.html" class="nav-item"><li class="nav-item"><i class="fa fa-chart-line"></i> <b>Summary</b></li></a>
-            <li class="nav-item"><i class="fa fa-comments"></i> <b>Chat</b></li>
-            <li class="nav-item"><i class="fa fa-user"></i> <b>Profile</b></li>
-            <li class="nav-item"><i class="fa fa-bell icon"></i> <b>Notification</b></li>
+
+            <li class="nav-item active">
+                <a href="dashboard.html">
+                    <i class="fa fa-home"></i>
+                    <b>Dashboard</b>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="plan.html">
+                    <i class="fa fa-chart-line"></i>
+                    <b>Planning</b>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="planSummary.html">
+                    <i class="fa fa-file-alt"></i>
+                    <b>Summary</b>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="">
+                    <i class="fa fa-comments"></i>
+                    <b>Chat</b>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="">
+                    <i class="fa fa-user"></i>
+                    <b>Profile</b>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="notifi.html">
+                    <i class="fa fa-bell icon"></i>
+                    <b>Notification</b>
+                </a>
+            </li>
+
         </ul>
     </div>
 
@@ -165,5 +202,10 @@
 </div>
 
 <script src="../js/dashboard.js"></script>
+
+<!--notification-->
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.2/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+
 </body>
 </html>
