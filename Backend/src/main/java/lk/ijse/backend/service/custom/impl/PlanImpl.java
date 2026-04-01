@@ -91,8 +91,6 @@ public class PlanImpl implements PlanService {
     public void delete(Long id) {
         System.out.println("plan delete");
         planRepo.deleteById(id);
-
-
     }
 
     @Transactional
@@ -101,7 +99,7 @@ public class PlanImpl implements PlanService {
         Plan plan = planRepo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Plan not found"));
 
-        // delete notifications first
+        // delete notification
         plan.getTasks().forEach(task -> {
             notificationRepo.deleteAll(task.getNotifications());
         });

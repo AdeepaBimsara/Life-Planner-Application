@@ -19,6 +19,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<APIResponse<String>> handleGenericException(Exception e){
+        e.printStackTrace();
             return new ResponseEntity<>(new APIResponse<>(
                     HttpStatus.INTERNAL_SERVER_ERROR.value(),
                     "Internal Server Eroor",
@@ -28,6 +29,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NullPointerException.class)
     public ResponseEntity<APIResponse<String>> handleNullPointerException(NullPointerException e) {
+        e.printStackTrace();
         return new ResponseEntity<>(new APIResponse<>(
                 HttpStatus.BAD_REQUEST.value(),
                 "Null Values are not allowed",
@@ -38,6 +40,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<APIResponse<Object>>
     handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+        e.printStackTrace();
+
         Map<String, String> errors = new HashMap<>();
         e.getBindingResult().getAllErrors().forEach((error) -> {
             errors.put(error.getObjectName(), error.getDefaultMessage());
@@ -52,6 +56,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(UsernameNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public APIResponse handleUserNameNotFoundException(UsernameNotFoundException ex) {
+        ex.printStackTrace();
+
         return new APIResponse(
                 HttpStatus.NOT_FOUND.value(),
                 "Username not found",
@@ -61,6 +67,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(BadCredentialsException.class)
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public APIResponse handleBadCredentialsException(BadCredentialsException ex) {
+        ex.printStackTrace();
         return new APIResponse(
                 HttpStatus.UNAUTHORIZED.value(),
                 "username or password is incorrect",
@@ -70,6 +77,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ExpiredJwtException.class)
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public APIResponse handleExpiredJwtException(ExpiredJwtException ex) {
+        ex.printStackTrace();
         return new APIResponse(
                 HttpStatus.UNAUTHORIZED.value(),
                 "expired token",
@@ -79,6 +87,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public APIResponse handleRuntimeException(RuntimeException ex) {
+        ex.printStackTrace();
         return new APIResponse(
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
                 "error occurred",

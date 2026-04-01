@@ -41,6 +41,7 @@ public class AuthImpl implements AuthService {
             throw new RuntimeException("Email Already Use");
         }
         User user = User.builder()
+                .name(registerDTO.getName())
                 .email(registerDTO.getEmail())
                 .password(passwordEncoder.encode(registerDTO.getPassword()))
                 .role(Role.valueOf(registerDTO.getRole()))
