@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+   <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+
+<div class="profile-card">
+
+    <div class="top" id="avater">
+        <label for="imgInput">
+            <img id="profileImg" src="" class="clickable-img">
+        </label>
+        <input type="file" id="imgInput" hidden>
+    </div>
+
+    <div class="info" >
+        <h2 id="userName"></h2>
+        <label id="userEmail"></label>
+    </div>
+
+    <div class="buttons">
+        <button onclick="resetPassword()">Reset Password</button>
+        <button onclick="window.location.href='loginPage.html'" >Sign Out</button>
+        <button class="danger" onclick="deleteAccount()">Delete Account</button>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="../js/profile.js"></script>
+</body>
+</html>

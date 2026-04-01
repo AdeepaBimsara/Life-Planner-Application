@@ -1,0 +1,52 @@
+body{
+    background: linear-gradient(135deg, #234b5b, #477e92, #4d93b1);
+    font-family: sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.profile-card{
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    text-align:center;
+    color:white;
+}
+
+.info{
+    margin-bottom: 30px;
+}
+
+.buttons button{
+    width:100%;
+    margin:5px 0;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#00c6ff;
+    color:white;
+}
+
+.danger{
+    background:#ff4b5c !important;
+}
+
+#avater {
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 62px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:3px solid white;
+    margin-left: 120px;
+}
